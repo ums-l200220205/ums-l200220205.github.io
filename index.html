@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L200220205</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        main {
+            max-width: 900px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card header {
+            background: #66a6ff;
+            padding: 15px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .card section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #66a6ff;
+            padding: 10px 20px;
+            border: 2px solid #66a6ff;
+            border-radius: 25px;
+            transition: background 0.3s ease, color 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .card a:hover {
+            background: #66a6ff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <header>Tugas Sebelum UTS</header>
+            <section>
+                <p>Explore tugas Python Anda untuk UTS di tautan berikut.</p>
+                <a target="_blank" href="">Lihat Tugas</a>
+            </section>
+        </div>
+        <div class="card">
+            <header>Tugas Sebelum UAS</header>
+            <section>
+                <p>Telusuri laporan tugas sebelum UAS dengan klik di bawah.</p>
+                <a target="_blank" href="https://ums-l200220205.github.io/laporan.html">Lihat Tugas</a>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

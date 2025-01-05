@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Clustering</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cluster {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cluster:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+        .cluster h3 {
+            background: #34495e;
+            color: #fff;
+            margin: 0;
+            padding: 10px;
+        }
+        .cluster ul {
+            margin: 0;
+            padding: 15px;
+            list-style: none;
+        }
+        .cluster ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .cluster ul li:last-child {
+            border-bottom: none;
+        }
+        .toggle-button {
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #1abc9c;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .toggle-button:hover {
+            background: #16a085;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Laporan Hasil Clustering</h1>
+    </header>
+    <main>
+        <p>Data diproses dan dianalisis dengan metode TF-IDF dan algoritma KMeans untuk membuat 3, 4, dan 5 klaster.</p>
+        
+        <div class="cluster">
+            <h3>Hasil Clustering (3 Klaster)</h3>
+            <ul>
+                <li>Klaster 1: media, disertakan, tidak</li>
+                <li>Klaster 2: alhamdulillah, assalamualaikum, mas</li>
+                <li>Klaster 3: dihapus, pesan, ini</li>
+            </ul>
+        </div>
+        
+        <div class="cluster">
+            <h3>Hasil Clustering (4 Klaster)</h3>
+            <ul>
+                <li>Klaster 1: media, disertakan, tidak</li>
+                <li>Klaster 2: mentoring, magang, kegiatan</li>
+                <li>Klaster 3: dihapus, pesan, ini</li>
+                <li>Klaster 4: alhamdulillah, assalamualaikum, mas</li>
+            </ul>
+        </div>
+        
+        <div class="cluster">
+            <h3>Hasil Clustering (5 Klaster)</h3>
+            <ul>
+                <li>Klaster 1: alhamdulillah, pengumuman, mas</li>
+                <li>Klaster 2: mentoring, magang, kegiatan</li>
+                <li>Klaster 3: dihapus, pesan, ini</li>
+                <li>Klaster 4: ya, di, untuk</li>
+                <li>Klaster 5: media, disertakan, tidak</li>
+            </ul>
+        </div>
+
+        <button class="toggle-button">Tampilkan/Sembunyikan Semua</button>
+    </main>
+    
+    <script>
+        // Mengatur interaksi tombol toggle
+        const toggleButton = document.querySelector('.toggle-button');
+        const clusters = document.querySelectorAll('.cluster');
+
+        toggleButton.addEventListener('click', () => {
+            clusters.forEach(cluster => {
+                cluster.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
